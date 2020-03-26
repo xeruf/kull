@@ -1,0 +1,3 @@
+Karma Summary: The basic commit message consists of `type(scope): summary`, followed by a newline and a body explaining changes, and another newline before the footer, which includes references to issues and breaking changes. Please read into the linked documentation for more detailed information.
+
+Non-feature branches are not really subject of this convention because they are rarely used. But there might be a permanent separate branch or a long-running rework branch, these need different processes than a usual feature branch, that's why the convention explicitly only refers to feature branches.
