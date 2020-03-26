@@ -16,9 +16,7 @@ To ease grasping the history, back-tracing of regressions and automated processi
 
 ### The hook
 
-The convention is managed and enforced by a `.dev` folder in the root of the repository. It contains shared git hooks in a folder called `githooks`, which has to be enabed by running `git config core.hooksPath .dev/githooks`. It should contain at least the commit-msg hook which will automatically refuse commits which do not adhere to the style:
-
-[commit-msg](https://raw.githubusercontent.com/Xerus2000/kull/master/.dev/githooks/commit-msg)
+The convention is managed and enforced by a `.dev` folder in the root of the repository. It contains shared git hooks in a folder called `githooks`, which has to be enabed by running `git config core.hooksPath .dev/githooks`. It should contain at least the [commit-msg hook](https://raw.githubusercontent.com/Xerus2000/kull/master/.dev/githooks/commit-msg) which will automatically refuse commits which do not adhere to the style.
 
 Since there is no single definition of what constitutes a "scope", the script requires a file `.dev/scopes.txt` in the repository. It should contain a newline-separated list of scopes that are allowed in the project.
 
