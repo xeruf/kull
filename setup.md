@@ -3,6 +3,7 @@
 - Create a `.dev/githooks` folder and add the [commit-msg hook](https://raw.githubusercontent.com/Xerus2000/kull/master/.dev/githooks/commit-msg) into it, ensuring it is executable
 - Define meaningful scopes in `.dev/scopes.txt`
 - Include a short summary and a link to the full convention in the Readme
+- When using GitHub: In the repository merge settings disable "Allow merge commits" and enable "Automatically delete head branches"
 
 ## Sample text for the Readme
 
