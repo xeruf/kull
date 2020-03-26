@@ -12,6 +12,6 @@ scopes="${scopes%\|})"
 cat "$1" | grep -Eq "(fix|feat|docs|style|refactor|test|chore|rework|release)(\($scopes\))?: [a-z]"
 result=$?
 if test $result -ne 0
-then echo "Please check that the commit message adheres to the guidelines at http://karma-runner.github.io/4.0/dev/git-commit-msg.html and matches the scopes defined in .dev/scopes.txt"
+then echo "Please check that the commit message adheres to the guidelines at http://karma-runner.github.io/latest/dev/git-commit-msg.html and its scope is in .dev/scopes.txt"
 fi
 exit $result

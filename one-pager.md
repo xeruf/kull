@@ -1,14 +1,14 @@
 # Kull Convention one-pager
 
-Kull is a Collaboration convention for git on GitHub focused on alignment through clear boundaries and maintaining a clean history.
+Kull is a Collaboration convention focused on maintaining a clean history by alignment through clear boundaries and structures.
 
 ### 1. Committing
 
-`*type(scope): summary*`
+*`type(scope): summary`*
 
-For a consistent and readable history, Kull follows the [Karma Runner](http://karma-runner.github.io/4.0/dev/git-commit-msg.html) commit message convention. Type and scope are checked against the allowed values by a git hook that has to be enabled with the following command:
+For a consistent and readable history, Kull follows the [Karma Runner](http://karma-runner.github.io/latest/dev/git-commit-msg.html) commit message convention. Type and scope are checked against the allowed values by a git hook that has to be enabled with the following command:
 
-`git config core.hooksPath .dev/githooks`
+    git config core.hooksPath .dev/githooks
 
 ### 2. Branching
 
