@@ -1,7 +1,7 @@
 # Adopting Kull in you project
 
 - Create a `.dev/githooks` folder and add the [commit-msg hook](https://raw.githubusercontent.com/Xerus2000/kull/master/.dev/githooks/commit-msg) into it, ensuring it is executable
-- Define meaningful scopes in `.dev/scopes.txt`
+- Define meaningful scopes in `.dev/scopes.txt` - one scope per line, empty lines and comments starting with # are allowed
 - Include a short summary and a link to the full convention in the Readme
 - When using GitHub: In the repository merge settings disable "Allow merge commits" and enable "Automatically delete head branches"
 
