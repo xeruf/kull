@@ -1,6 +1,6 @@
 # Kull Convention
 
-There is also a [one-pager](one-pager.md) and an [explanation of terms](terms.md) available. If you want to adopt Kull in your project, follow the [setup guide](setup.md).
+Some clarifications of terms are [here](terms.md). If you want to adopt Kull in your project, follow the [setup guide](setup.md).
 
 ## Summary
 

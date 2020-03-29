@@ -1,6 +1,6 @@
 # Kull Convention one-pager
 
-Kull is a Collaboration convention focused on maintaining a clean history by alignment through clear boundaries and structures.
+Kull is a Collaboration convention to maintain a clean history and preserve order through clear rules and processes.
 
 ### 1. Committing
 
