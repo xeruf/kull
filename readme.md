@@ -35,11 +35,11 @@ Upon pushing a new feature branch, create a corresponding draft pull request wit
 
 Review thoroughly to ensure long term alignment. To prevent misunderstandings, the PR owner should comment on a review comment with a reference to the fix once he considers it fixed and only the reviewer who created that comment may then resolve it.
 
-To build on top of unmerged changes, branch off rather than adding features to a branch in review. Only request review for that new branch once the base branch is merged. This alleviates the work of reviewers.
+To build on top of unmerged changes, branch off rather than adding features to a branch in review. Only request review for that new branch once the base branch is merged.
 
 ## 4. Merging
 
 A pull request should be approved by at least one other person and pass all tests before being merged. The owner of the PR should merge it as he knows the state and content best.
 
-Merge pull requests using either squash or rebase to prevent noise from merge commits and superfluous small commits. The default is squash merging, with the title of the PR as the title of the commit and a description summarising the changes and fixes. Due to this it is not important to keep feature branch history clean - experimental and even merge commits are acceptable within a branch if it is certain to be squashed.  
+Merge using either squash or rebase to keep noise such as experimental and merge commits out of the main history. The default is squash merging, with the title of the PR as the title of the commit and a description summarising the changes and fixes. Due to this it is not as important to keep feature branch history clean - experimental and even merge commits are acceptable within a branch if it is certain to be squashed. 
 A rebase may be appropriate if each commit in the PR has meaning on its own. On the other hand, if the changes are too big for a squash to seem appropriate, they should be split up - rebase merging will likely put many redundant or meaningless commits into master.
