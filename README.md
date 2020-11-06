@@ -21,7 +21,9 @@ The convention is managed and enforced by a `.dev` folder in the root of the rep
 
 Since there is no single definition of what constitutes a "scope", the script requires a file `.dev/scopes.txt` in the repository. It should contain a newline-separated list of scopes that are allowed in the project.
 
-The script allows an additional commit type called *rework* for migration from a less strict convention or for beta stages where commits often end up too broad to fit into a single type. However, it should not be used in production code, so for a mature project it might be removed from the hook. A *release* type is also included in case the project wants to specially highlight release commits.
+The script allows an additional commit type called *rework* for migration from a less strict convention or for beta stages where commits often end up too broad to fit into a single type.
+For mature projects it should be removed from the hook (by modifying the Regex at line 12) since it is unhelpful in the long-term.
+It also adds a *release* type in case the project wants to specially highlight release commits that only bump version numbers - it may be removed as well.
 
 ## 2. Branching
 
@@ -31,7 +33,8 @@ Sometimes there is an additional development branch, but it is often superfluous
 
 ## 3. Reviewing
 
-Upon pushing a new feature branch, create a corresponding draft pull request with a title that summarizes the changes and conforms to the commit message convention. An open pull request is above all documentation and should be ignored until its creator explicitly requests reviews. If a branch has no associated PR and no recent activity, it is subject to deletion.
+Upon pushing a new feature branch, create a corresponding draft pull request with a title that summarizes the changes and conforms to the commit message convention, unless you want to signal that this will not be a squash merge.
+An open pull request is above all documentation and should be ignored until its owner explicitly requests reviews. If a branch has no associated PR and no recent activity, it is subject to deletion.
 
 Review thoroughly to ensure long term alignment. To prevent misunderstandings, the PR owner should comment on a review comment with a reference to the fix once he considers it fixed and only the reviewer who created that comment may then resolve it.
 
