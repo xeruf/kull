@@ -1,6 +1,6 @@
 # Kull Convention
 
-Some clarifications of terms are [here](terms.md). If you want to adopt Kull in your project, follow the [setup guide](setup.md).
+Please get familiar with some [terminology](terminology.md) first. If you want to adopt Kull in your project, follow the [setup guide](setup.md).
 
 ## Summary
 
