@@ -7,7 +7,7 @@
 
 ## Example text for use in a Readme
 ```
-This project follows the [Kull Convention](https://xeruf.github.io/kull) to ensure consistent collaboration. Please read through it and run the following command after cloning to enable the git hook:
+This project follows the [Kull Convention](https://kull.jfischer.org) to ensure consistent collaboration. Please read through it and run the following command after cloning to enable the git hook:
 
     git config core.hooksPath .dev/githooks
 

@@ -29,7 +29,7 @@ if beginswith $'\n#' "$original"; then
     echo "# <type>(<scope>): <description>"
     echo "# Possible types: fix, feat, docs, style, refactor, test, chore"
     test -n "$scopes" && echo "# Allowed scopes: $scopes"
-    echo "# For details see https://xeruf.github.io/kull"
+    echo "# For details see https://kull.jfischer.org"
     echo "$original"
   } > "$COMMIT_MSG_FILE"
 fi
