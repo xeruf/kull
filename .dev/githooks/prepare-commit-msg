@@ -16,15 +16,20 @@ COMMIT_MSG_FILE=$1
 COMMIT_SOURCE=$2
 SHA1=$3
 
+scopes_file=".dev/scopes.txt"
+test -r $scopes_file &&
+  scopes="$(cat "$scopes_file" | sed '/^\(#.*\|\)$/d' | sed ':a;N;s/\n/, /g;ta')"
+
 beginswith() { case $2 in "$1"*) true;; *) false;; esac; }
 
 original=$(cat "$COMMIT_MSG_FILE")
 if beginswith $'\n#' "$original"; then
-    {
-        printf "\n\n# Please enter the message in the format\n"
-        echo "# <type>(<scope>): <description>"
-        echo "# Possible types: fix, feat, docs, style, refactor, test, chore, rework, release"
-        printf "# For details see https://github.com/xerus2000/kull" >> "$COMMIT_MSG_FILE"
-        echo "$original"
-    } > "$COMMIT_MSG_FILE"
+  {
+    printf "\n\n# Please enter the message in the format\n"
+    echo "# <type>(<scope>): <description>"
+    echo "# Possible types: fix, feat, docs, style, refactor, test, chore"
+    test -n "$scopes" && echo "# Allowed scopes: $scopes"
+    echo "# For details see https://xeruf.github.io/kull"
+    echo "$original"
+  } > "$COMMIT_MSG_FILE"
 fi
