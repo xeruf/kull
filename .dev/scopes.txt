@@ -1,11 +1,10 @@
 # This file defines the allowed commit message scopes
 # One scope per line - empty lines and lines starting with # are ignored
-# Keeping a newline at the end of the file is required for the script to pick up everything
+# A newline at the end of the file is mandatory
 
 # General
-config
 dev
 
-# Markdown-files
+# Markdown-documentation
 readme
 setup
