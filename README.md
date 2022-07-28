@@ -6,7 +6,9 @@ Please get familiar with some [terminology](terminology.md) first. If you want t
 
 Kull is a collaboration convention aimed at Git on GitHub that preserves order through clear rules and processes. These are the main points:
 
-- **commit message format**: `type(scope): summary` as described in [Karma Runner](http://karma-runner.github.io/latest/dev/git-commit-msg.html) with predefined scopes, enforced using a Git commit-msg hook
+- **commit message format**: `type(scope): summary`
+  as described in [Karma Runner](http://karma-runner.github.io/latest/dev/git-commit-msg.html) 
+  with predefined scopes, enforced using a Git commit-msg hook
 - **branching**: default + descriptively named feature branches; draft pull requests for documentation
 - **reviewing**: the contributor is responsible for opening and merging his pull requests; review comments are only resolved by the reviewer
 - **merging**: after approval, merge a branch via squash or rebase and then delete it
@@ -20,6 +22,8 @@ To ease grasping the history, back-tracing of regressions and automated processi
 The convention is managed and enforced by a `.dev` folder in the root of the repository. It holds shared Git hooks in a folder called `githooks`, enabled by running `git config core.hooksPath .dev/githooks`. The [commit-msg hook](.dev/githooks/commit-msg) will then automatically refuse commits which do not adhere to the format.
 
 Since there is no single definition of what constitutes a "scope", the script requires a file `.dev/scopes.txt` in the repository. It should contain a newline-separated list of scopes that are allowed in the project.
+
+TODO allow executable scopesfile
 
 The script allows an additional commit type called *rework* for migration from a less strict convention or for beta stages where commits often end up too broad to fit into a single type.
 For mature projects it should be removed from the hook (by modifying the Regex at line 12) since it is unhelpful in the long-term.
