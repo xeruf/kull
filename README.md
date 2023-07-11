@@ -12,7 +12,7 @@ that preserves order through clear rules and processes.
 These are the main points:
 
 - **commit message format**: `type(scope): summary`
-  as described in [Karma Runner](http://karma-runner.github.io/latest/dev/git-commit-msg.html) 
+  as described in [Karma Runner](http://karma-runner.github.io/6.2/dev/git-commit-msg.html) 
   with predefined scopes, enforced using a Git commit-msg hook
 - **branching**: default + descriptively named feature branches; draft pull requests for documentation
 - **reviewing**: the contributor is responsible for opening and merging his pull requests; review comments are only resolved by the reviewer
@@ -21,7 +21,7 @@ These are the main points:
 ## 1. Committing
 
 To ease grasping the history, back-tracing of regressions and automated processing,
-Kull follows the [Karma Runner commit message convention](http://karma-runner.github.io/latest/dev/git-commit-msg.html).
+Kull follows the [Karma Runner commit message convention](http://karma-runner.github.io/6.2/dev/git-commit-msg.html).
 The first line is in `type(scope): summary` format 
 with the summary in [imperative mood](https://chris.beams.io/posts/git-commit/#imperative).
 List closed issues with the "Closes" keyword on a separate line in the footer, e.g. "Closes #1, #23, #34".
