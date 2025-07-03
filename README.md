@@ -6,13 +6,13 @@ follow the [setup guide](setup.md).
 
 ## Summary
 
-Kull is a collaboration convention for teams 
+Kull is a collaboration convention for teams
 working together through distributed version control (DVCS, like Git)
 that preserves order through clear rules and processes.
 These are the main points:
 
 - **commit message format**: `type(scope): summary`
-  as described in [Karma Runner](http://karma-runner.github.io/6.2/dev/git-commit-msg.html) 
+  as described in [Karma Runner](http://karma-runner.github.io/6.4/dev/git-commit-msg.html)
   with predefined scopes, enforced using a Git commit-msg hook
 - **branching**: default + descriptively named feature branches; draft pull requests for documentation
 - **reviewing**: the contributor is responsible for opening and merging his pull requests; review comments are only resolved by the reviewer
@@ -21,8 +21,8 @@ These are the main points:
 ## 1. Committing
 
 To ease grasping the history, back-tracing of regressions and automated processing,
-Kull follows the [Karma Runner commit message convention](http://karma-runner.github.io/6.2/dev/git-commit-msg.html).
-The first line is in `type(scope): summary` format 
+Kull follows the [Karma Runner commit message convention](http://karma-runner.github.io/6.4/dev/git-commit-msg.html).
+The first line is in `type(scope): summary` format
 with the summary in [imperative mood](https://chris.beams.io/posts/git-commit/#imperative).
 List closed issues with the "Closes" keyword on a separate line in the footer, e.g. "Closes #1, #23, #34".
 
@@ -40,11 +40,12 @@ It should contain a newline-separated list of scopes allowed in the project.
 
 <!-- TODO allow executable scopesfile -->
 
-The script admits an additional commit type called *rework* for migration from a less strict convention 
+The script admits an additional commit type called *rework* for migration from a less strict convention
 or for beta stages where commits often end up too broad to fit into a single type.
-For mature projects it should be removed from the hook (by modifying the Regex at line 8) 
+For mature projects it should be removed from the hook (by modifying the Regex at line 8)
 since it is unhelpful in the long-term.
-It also adds a *release* type in case the project wants to specially highlight release commits that only bump version numbers - 
+It also adds a *release* type in case the project wants to highlight release commits
+that only bump version numbers -
 it may be removed as well.
 
 ## 2. Branching
@@ -61,11 +62,11 @@ Whether it is main or development, the default branch should always build, so th
 ## 3. Reviewing
 
 Upon pushing a new feature branch,
-create a corresponding draft pull request with a title that summarizes the changes 
+create a corresponding draft pull request with a title that summarizes the changes
 and conforms to the commit message convention,
 unless you want to signal that this will not be a squash merge.
 An open pull request is above all documentation of work done
-and is not expected to be minded 
+and is not expected to be minded
 until its owner explicitly requests reviews.
 If a branch has no associated PR and no recent activity,
 it is subject to deletion.
@@ -82,12 +83,12 @@ Only request review for that new branch once the base branch is merged.
 A pull request should be approved by at least one other person and pass all tests before being merged.
 The owner of the PR should merge it as he knows the state and content best.
 
-Merge using either squash or rebase to keep noise such as experimental and merge commits out of the main history.  
-The default is squash merging, 
-with the title of the PR as the title of the commit 
+Merge using either squash or rebase to keep noise such as experimental and merge commits out of the main history.
+The default is squash merging,
+with the title of the PR as the title of the commit
 and a description summarising the changes and fixes.
 Due to this it is not as important to keep feature branch history clean -
-experimental and even merge commits are acceptable within a branch if it is certain to be squashed.  
+experimental and even merge commits are acceptable within a branch if it is certain to be squashed.
 A rebase may be appropriate if each commit in the PR builds on its own.
 On the other hand, if the changes are too big for a squash to seem appropriate, they should be split up -
 rebase merging will likely put redundant or meaningless commits into the history of the merge target.

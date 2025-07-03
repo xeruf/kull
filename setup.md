@@ -12,7 +12,7 @@ This project follows the [Kull Convention](https://kull.jfischer.org) to ensure 
     git config core.hooksPath .dev/githooks
 
 In short:
-- Write commit messages in `type(scope): summary` format according to the [Karma Runner convention](http://karma-runner.github.io/6.2/dev/git-commit-msg.html), using the [imperative mood](https://chris.beams.io/posts/git-commit/#imperative) for the summary and the "Closes" keyword in the footer for closed issues
+- Write commit messages in `type(scope): summary` format according to the [Karma Runner convention](http://karma-runner.github.io/6.4/dev/git-commit-msg.html), using the [imperative mood](https://chris.beams.io/posts/git-commit/#imperative) for the summary and the "Closes" keyword in the footer for closed issues
 - Create feature branches with descriptive names and utilize draft pull requests as documentation
 - Only the reviewer resolves review comments to avoid confusion; do not add features to branches in review
 - Pull requests should be merged by their creator after approval using squash or rebase, keeping a clean history

@@ -11,3 +11,6 @@ If both numbers are in the double-digits, the merge should be rethought or is al
 - mission/focus/task branches
 - grouping branches
 - development/long-running/parallel branches -> chore(merge)
+
+## Scopes
+When using subscopes, ensure that the commit only changes a single file and its test.

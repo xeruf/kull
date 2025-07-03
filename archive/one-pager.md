@@ -6,7 +6,7 @@ Kull is a Collaboration convention to maintain a clean history and preserve orde
 
 *`type(scope): summary`*
 
-For a consistent and readable history, Kull follows the [Karma Runner](http://karma-runner.github.io/6.2/dev/git-commit-msg.html) commit message convention. Type and scope are checked against the allowed values by a git hook that has to be enabled with the following command:
+For a consistent and readable history, Kull follows the [Karma Runner](http://karma-runner.github.io/6.4/dev/git-commit-msg.html) commit message convention. Type and scope are checked against the allowed values by a git hook that has to be enabled with the following command:
 
     git config core.hooksPath .dev/githooks
 
